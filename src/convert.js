@@ -47,7 +47,7 @@ function w() {
   list.innerHTML = '';
   let f = model.value.toLowerCase();
 
-  const filterValue = modelFilter.filter(({ Name }) => Name.toLowerCase().includes(f));
+  const filterValue = modelFilter.filter(({ Name, Articul }) => Name.toLowerCase().includes(f) || Articul.toLowerCase().includes(f));
 
   console.log(filterValue);
 
