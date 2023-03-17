@@ -51,15 +51,15 @@ function w() {
 
   console.log(filterValue);
 
-  let i = 0;
-  const avto = [];
-  for (let value of filterValue) {
-    i += 1;
-    if (i < 20) {
-      avto.push(value);
-    }
-  }
-  const priceList = avto.map(autopartsList).join(' ');
+  // let i = 0;
+  // const avto = [];
+  // for (let value of filterValue) {
+  //   i += 1;
+  //   if (i < 20) {
+  //     avto.push(value);
+  //   }
+  // }
+  const priceList = filterValue.map(autopartsList).join(' ');
   console.log(priceList);
   list.insertAdjacentHTML('beforeend', priceList);
 }
@@ -69,7 +69,7 @@ const autopartsList = ({ Brend, Model, Articul, Name, Manufacturer, country, Pri
   const src = "https://dummyimage.com/640x480/2a2a2a/ffffff&text=%D0%A4%D0%BE%D1%82%D0%BE+%D0%BE%D1%87%D1%96%D0%BA%D1%83%D1%94%D1%82%D1%8C%D1%81%D1%8F";
   return `
 <div class="item">
-<img src=${Img || src} alt = "" width = "300px">
+<img src=${Img || src} alt = "" style="width: 100%;  height: 260px;  object-fit: cover">
   <p>Бренд: ${Brend}</p>
   <p>Модель: ${Model}</p>
   <p>Артикул: ${Articul}</p>
