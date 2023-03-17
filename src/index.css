@@ -1,0 +1,23 @@
+body {
+  max-width: 1600px;
+  text-align: center;
+  background-color: rgb(231, 227, 227);
+}
+
+.list {
+  display: grid;
+  max-width: 1140px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 12px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.select {
+  margin-bottom: 20px;
+}
+
+.item {
+  border: 2px solid blue;
+  padding: 10px;
+}
