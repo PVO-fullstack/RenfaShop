@@ -64,11 +64,12 @@ function w() {
   list.insertAdjacentHTML('beforeend', priceList);
 }
 
-const autopartsList = ({ Brend, Model, Articul, Name, Manufacturer, country, Price, Quantity }) => {
+const autopartsList = ({ Brend, Model, Articul, Name, Manufacturer, country, Price, Quantity, Img }) => {
   const totalPrice = Math.round(Price * curs);
+  const src = "https://dummyimage.com/640x480/2a2a2a/ffffff&text=%D0%A4%D0%BE%D1%82%D0%BE+%D0%BE%D1%87%D1%96%D0%BA%D1%83%D1%94%D1%82%D1%8C%D1%81%D1%8F";
   return `
 <div class="item">
-<img src="https://dummyimage.com/640x480/2a2a2a/ffffff&text=%D0%A4%D0%BE%D1%82%D0%BE+%D0%BE%D1%87%D1%96%D0%BA%D1%83%D1%94%D1%82%D1%8C%D1%81%D1%8F" alt="" width="200px">
+<img src=${Img || src} alt = "" width = "300px">
   <p>Бренд: ${Brend}</p>
   <p>Модель: ${Model}</p>
   <p>Артикул: ${Articul}</p>
